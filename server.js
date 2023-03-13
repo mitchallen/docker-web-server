@@ -21,6 +21,7 @@ process.on('SIGINT', () => {
   server.close(() => {
     console.debug('HTTP server closed')
   })
+  process.exit()
 })
 
 process.on('SIGTERM', () => {
@@ -28,6 +29,7 @@ process.on('SIGTERM', () => {
   server.close(() => {
     console.debug('HTTP server closed')
   })
+  process.exit()
 })
 
 

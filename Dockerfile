@@ -14,7 +14,9 @@ RUN npm install
 COPY . .
 
 # Set the container's default command to start the server
-CMD ["node", "server.js"]
+# CMD ["node", "server.js"]
+# Required npm start to set version in NodeJS
+CMD ["npm", "start"]
 
 # Expose port 3000
 EXPOSE 3000
